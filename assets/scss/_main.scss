@@ -1,0 +1,283 @@
+@media screen and (min-width: 320px) {
+    .wrapper {
+        .wrapperContainer {
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                width: 100%;
+                
+                img {
+                    height: 30px;
+                }
+            }
+            
+            .location {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px;
+                gap: 10px;
+                background-color: #ededed;
+
+                input {
+                    outline: none;
+                    border: none;
+                    display: inline-block;
+                    background-color: transparent;
+                    text-align: center;
+                }
+            }
+
+            .home {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding: 40px 15px;
+                background-color: #f4f4f4;
+
+                .homeContainer {
+                    p {
+                        margin: 20px 0;
+                    }
+
+                    a {
+                        margin-top: 10px;
+                        display: inline-block;
+                        background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
+                        color: #fff;
+                        padding: 20px 30px;
+                        border-radius: 30px;
+                    }
+                }
+            }
+
+            .functioning {
+                padding: 40px 15px;
+
+                .functioningContainer {
+                    margin-top: 20px;
+                    padding-left: 10px;
+                    grid-gap: 20px;
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+
+                    .functioningBox {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        background-color: #f4f4f4;
+                        padding: 30px;
+                        border-radius: 25px;
+
+                        &:hover {
+                            background-color: #f9d7f9;
+                        }
+
+                        .functioningBoxNumber {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            top: 30px;
+                            left: -10px;
+                            background-color: rgb(161, 12, 214);
+                            border-radius: 50%;
+                            height: 25px;
+                            width: 25px;
+
+                            div {
+                                color: #fff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .restaurant {
+                padding: 40px 20px;
+                background-color: #f4f4f4;
+
+                .restaurantContainer {
+                    margin-top: 30px;
+                    display: grid;
+                    grid-gap: 20px;
+                    grid-template-columns: repeat(1, 1fr);
+
+                    .restaurantBox {
+                        position: relative;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        
+                        figure {
+                            .restaurantInfo {
+                                position: absolute;
+                                top: 15px;
+                                right: 15px;
+                                padding: 10px 20px;
+                                background-color: #62cba0;
+                                border-radius: 5px;
+                                color: #316750;
+                            }
+
+                            .restaurantImg {
+                                overflow: hidden;
+                                height: 100%;
+                                width: 100%;
+
+                                img {
+                                    height: 200px;
+                                    width: 100%;
+                                    border-top-left-radius: 20px;
+                                    border-top-right-radius: 20px;
+
+                                    object-fit: cover;
+                                }
+                            }
+
+                            figcaption {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 20px;
+
+                                .figcaptionContainer {
+                                    
+                                }
+
+                                p {
+                                    font-weight: 600;
+                                }
+
+                                span {
+                                    display: inline-block;
+                                    margin-top: 5px;
+                                    // background-color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 40px 15px;
+        background-color: #303030;
+
+        .footerContainer {
+            .footerLogo {
+                img {
+                    height: 25px;
+                }
+            }
+
+            .footerList {
+                margin-top: 20px;
+
+                .footerBox {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    
+                    i,p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        .wrapperContainer {
+            .functioning {
+                padding: 40px 100px;
+                
+                .functioningContainer {
+                    padding: 0;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .restaurant {
+                padding: 40px 100px;
+                
+                .restaurantContainer {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 40px;
+
+        .footerContainer {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 100px;
+
+            .footerList {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        display: none;
+    }
+}
+
+.wrapper {
+    animation: showContent 1s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+    }
+}
