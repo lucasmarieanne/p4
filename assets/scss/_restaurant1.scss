@@ -88,18 +88,9 @@
 
                                 .menuNameBIG {
                                     display: flex;
-                                    width: 100%;
-
-                                    &:hover {
-                                        .menuName {
-                                            border-top-right-radius: 0;
-                                            border-bottom-right-radius: 0;
-                                        }
-
-                                        .hiddenCheck {
-                                            display: flex;
-                                        }
-                                    }
+                                    align-items: center;
+                                    cursor: pointer;
+                                    overflow: hidden; 
 
                                     .menuName {
                                         border-radius: 15px;
@@ -107,6 +98,8 @@
                                         background-color: #fff; 
                                         box-shadow: 0 10px 10px #e7e7e7;
                                         width: 100%;
+                                        transition: width 0.3s ease;
+                                        box-sizing: border-box;
                                        
                                        .name1 {
                                             font-size: 18px;
@@ -128,22 +121,13 @@
                                         }
                                     }
     
-                                    .hiddenCheck {
-                                        display: none;
-                                        align-items: center;
-                                        justify-content: center;
-                                        padding: 0 20px;
-                                        background-color: #58cea7;
-                                        border-top-right-radius: 15px;
-                                        border-bottom-right-radius: 15px;
-
+                                    .hiddenCheck {                                       
                                         i {
                                             color: #fff;
                                         }
     
                                     }
                                 }
-                                
                             }
         
                             .buttonOrder {

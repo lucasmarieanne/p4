@@ -23,6 +23,11 @@ ul, li {
   list-style-type: none;
 }
 
+label, input {
+  outline: none;
+  background-color: transparent;
+}
+
 @media screen and (min-width: 320px) {
   .wrapper .wrapperContainer header {
     display: flex;
@@ -327,14 +332,9 @@ ul, li {
   }
   .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG {
     display: flex;
-    width: 100%;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG:hover .menuName {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG:hover .hiddenCheck {
-    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
   }
   .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName {
     border-radius: 15px;
@@ -342,6 +342,8 @@ ul, li {
     background-color: #fff;
     box-shadow: 0 10px 10px #e7e7e7;
     width: 100%;
+    transition: width 0.3s ease;
+    box-sizing: border-box;
   }
   .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .name1 {
     font-size: 18px;
@@ -357,15 +359,6 @@ ul, li {
   }
   .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer .price {
     font-weight: 600;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .hiddenCheck {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    background-color: #58cea7;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
   }
   .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .hiddenCheck i {
     color: #fff;
