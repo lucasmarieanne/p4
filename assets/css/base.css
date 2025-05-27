@@ -28,160 +28,167 @@ label, input {
   background-color: transparent;
 }
 
-@media screen and (min-width: 320px) {
-  .wrapper .wrapperContainer header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    width: 100%;
-  }
-  .wrapper .wrapperContainer header img {
-    height: 30px;
-  }
-  .wrapper .wrapperContainer .location {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    gap: 10px;
-    background-color: #ededed;
-  }
-  .wrapper .wrapperContainer .location input {
-    outline: none;
-    border: none;
-    display: inline-block;
-    background-color: transparent;
-    text-align: center;
-  }
-  .wrapper .wrapperContainer .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 40px 15px;
-    background-color: #f4f4f4;
-  }
-  .wrapper .wrapperContainer .home .homeContainer p {
-    margin: 20px 0;
-  }
-  .wrapper .wrapperContainer .home .homeContainer a {
-    margin-top: 10px;
-    display: inline-block;
-    background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
-    color: #fff;
-    padding: 20px 30px;
-    border-radius: 30px;
-  }
-  .wrapper .wrapperContainer .functioning {
-    padding: 40px 15px;
-  }
-  .wrapper .wrapperContainer .functioning .functioningContainer {
-    margin-top: 20px;
-    padding-left: 10px;
-    grid-gap: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .wrapper .wrapperContainer .functioning .functioningContainer .functioningBox {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-radius: 25px;
-  }
-  .wrapper .wrapperContainer .functioning .functioningContainer .functioningBox:hover {
-    background-color: #f9d7f9;
-  }
-  .wrapper .wrapperContainer .functioning .functioningContainer .functioningBox .functioningBoxNumber {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 30px;
-    left: -10px;
-    background-color: rgb(161, 12, 214);
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-  }
-  .wrapper .wrapperContainer .functioning .functioningContainer .functioningBox .functioningBoxNumber div {
-    color: #fff;
-    font-size: 14px;
-  }
-  .wrapper .wrapperContainer .restaurant {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer {
-    margin-top: 30px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox {
-    position: relative;
-    background-color: #fff;
-    border-radius: 20px;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure .restaurantInfo {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 10px 20px;
-    background-color: #62cba0;
-    border-radius: 5px;
-    color: #316750;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure .restaurantImg {
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure .restaurantImg img {
-    height: 200px;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure figcaption {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure figcaption p {
-    font-weight: 600;
-  }
-  .wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure figcaption span {
-    display: inline-block;
-    margin-top: 5px;
-  }
-  footer {
-    padding: 40px 15px;
-    background-color: #303030;
-  }
-  footer .footerContainer .footerLogo img {
-    height: 25px;
-  }
-  footer .footerContainer .footerList {
-    margin-top: 20px;
-  }
-  footer .footerContainer .footerList .footerBox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  footer .footerContainer .footerList .footerBox i, footer .footerContainer .footerList .footerBox p {
-    color: #fff;
-  }
+.wrapper {
+  animation: showContent 1s forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
+.wrapper .wrapperContainer header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+.wrapper .wrapperContainer header img {
+  height: 30px;
+}
+.wrapper .wrapperContainer .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 10px;
+  background-color: #ededed;
+}
+.wrapper .wrapperContainer .location input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+.wrapper .wrapperContainer .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 40px 15px;
+  background-color: #f4f4f4;
+}
+.wrapper .wrapperContainer .home .homeContainer p {
+  margin: 20px 0;
+}
+.wrapper .wrapperContainer .home .homeContainer a {
+  margin-top: 10px;
+  display: inline-block;
+  background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
+.wrapper .wrapperContainer .home .homeContainer a:hover {
+  background: linear-gradient(to bottom, rgb(160, 71, 201), rgb(222, 84, 222));
+}
+.wrapper .wrapperContainer .functioning {
+  padding: 40px 15px;
+}
+.wrapper .wrapperContainer .functioning .functioningContainer {
+  margin-top: 20px;
+  padding-left: 10px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+}
+.wrapper .wrapperContainer .functioning .functioningContainer .functioningBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 25px;
+}
+.wrapper .wrapperContainer .functioning .functioningContainer .functioningBox:hover {
+  background-color: #f9d7f9;
+}
+.wrapper .wrapperContainer .functioning .functioningContainer .functioningBox .functioningBoxNumber {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(161, 12, 214);
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+.wrapper .wrapperContainer .functioning .functioningContainer .functioningBox .functioningBoxNumber div {
+  color: #fff;
+  font-size: 14px;
+}
+.wrapper .wrapperContainer .restaurant {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure .restaurantInfo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 10px 20px;
+  background-color: #62cba0;
+  border-radius: 5px;
+  color: #316750;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure .restaurantImg {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure .restaurantImg img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure figcaption p {
+  font-weight: 600;
+}
+.wrapper .wrapperContainer .restaurant .restaurantContainer .restaurantBox figure figcaption span {
+  display: inline-block;
+  margin-top: 5px;
+}
+.wrapper footer {
+  padding: 40px 15px;
+  background-color: #303030;
+}
+.wrapper footer .footerContainer .footerLogo img {
+  height: 25px;
+}
+.wrapper footer .footerContainer .footerList {
+  margin-top: 20px;
+}
+.wrapper footer .footerContainer .footerList .footerBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapper footer .footerContainer .footerList .footerBox i,
+.wrapper footer .footerContainer .footerList .footerBox p {
+  color: #fff;
+}
+
 @media screen and (min-width: 1024px) {
   .wrapper .wrapperContainer .functioning {
     padding: 40px 100px;
@@ -242,158 +249,157 @@ label, input {
     display: none;
   }
 }
-.wrapper {
-  animation: showContent 1s forwards;
-  animation-delay: 1s;
-  opacity: 0;
-}
-
 @keyframes showContent {
   to {
     opacity: 1;
   }
 }
-@media screen and (min-width: 320px) {
-  .wrapperR .wrapperContainer header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    width: 100%;
-  }
-  .wrapperR .wrapperContainer header img {
-    height: 30px;
-  }
-  .wrapperR .wrapperContainer .home {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    background-color: #f4f4f4;
-    z-index: 0;
-  }
-  .wrapperR .wrapperContainer .home .homeContainer img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .wrapperR .wrapperContainer .home .menu {
-    background-color: #fff;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer {
-    position: relative;
-    margin-top: -60px;
-    border-radius: 40px 40px 0 0;
-    background-color: #f4f4f4;
-    z-index: 10;
-    width: 100%;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuTitle {
-    padding: 40px 15px 0 15px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuTitle h1 {
-    font-style: italic;
-    font-size: 25px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuTitle i {
-    font-size: 20px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 40px 15px;
-    grid-gap: 30px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox h2 {
-    position: relative;
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox h2::after {
-    content: "";
-    left: 0;
-    bottom: -5px;
-    position: absolute;
-    background-color: #58cea7;
-    height: 3px;
-    width: 50px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName {
-    border-radius: 15px;
-    padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 10px 10px #e7e7e7;
-    width: 100%;
-    transition: width 0.3s ease;
-    box-sizing: border-box;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .name1 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer .name2 {
-    font-size: 14px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer .price {
-    font-weight: 600;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .hiddenCheck i {
-    color: #fff;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .buttonOrder {
-    text-align: center;
-    margin-top: 10px;
-  }
-  .wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .buttonOrder a {
-    color: #fff;
-    display: inline-block;
-    padding: 20px 50px;
-    border-radius: 30px;
-    background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
-  }
-  footer {
-    z-index: 1000;
-    padding: 40px 15px;
-    background-color: #303030;
-  }
-  footer .footerContainer .footerLogo img {
-    height: 25px;
-  }
-  footer .footerContainer .footerList {
-    margin-top: 20px;
-  }
-  footer .footerContainer .footerList .footerBox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  footer .footerContainer .footerList .footerBox i, footer .footerContainer .footerList .footerBox p {
-    color: #fff;
-  }
+.wrapperR {
+  animation: showContent 1s forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
+.wrapperR .wrapperContainer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+.wrapperR .wrapperContainer header img {
+  height: 30px;
+}
+.wrapperR .wrapperContainer .home {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: #f4f4f4;
+  z-index: 0;
+}
+.wrapperR .wrapperContainer .home .homeContainer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapperR .wrapperContainer .home .menu {
+  background-color: #fff;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer {
+  position: relative;
+  margin-top: -60px;
+  border-radius: 40px 40px 0 0;
+  background-color: #f4f4f4;
+  z-index: 10;
+  width: 100%;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuTitle {
+  padding: 40px 15px 0 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuTitle h1 {
+  font-style: italic;
+  font-size: 25px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuTitle i {
+  font-size: 20px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 40px 15px;
+  grid-gap: 30px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox h2 {
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox h2::after {
+  content: "";
+  left: 0;
+  bottom: -5px;
+  position: absolute;
+  background-color: #58cea7;
+  height: 3px;
+  width: 50px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName {
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px #e7e7e7;
+  width: 100%;
+  transition: width 0.3s ease;
+  box-sizing: border-box;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .name1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer .name2 {
+  font-size: 14px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .menuName .menuNameContainer .price {
+  font-weight: 600;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .menuBox .menuNameBIG .hiddenCheck i {
+  color: #fff;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .buttonOrder {
+  text-align: center;
+  margin-top: 10px;
+}
+.wrapperR .wrapperContainer .home .menu .menuBigContainer .menuContainer .buttonOrder a {
+  color: #fff;
+  display: inline-block;
+  padding: 20px 50px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
+}
+
+footer {
+  z-index: 1000;
+  padding: 40px 15px;
+  background-color: #303030;
+}
+footer .footerContainer .footerLogo img {
+  height: 25px;
+}
+footer .footerContainer .footerList {
+  margin-top: 20px;
+}
+footer .footerContainer .footerList .footerBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .footerContainer .footerList .footerBox i, footer .footerContainer .footerList .footerBox p {
+  color: #fff;
+}
+
 @media screen and (min-width: 1440px) {
   .wrapperR .wrapperContainer .home .homeContainer img {
     height: 400px;
@@ -450,12 +456,6 @@ label, input {
     display: none;
   }
 }
-.wrapperR {
-  animation: showContent 1s forwards;
-  animation-delay: 1s;
-  opacity: 0;
-}
-
 @keyframes showContent {
   to {
     opacity: 1;

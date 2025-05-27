@@ -1,178 +1,180 @@
-@media screen and (min-width: 320px) {
-    .wrapperR {
-        .wrapperContainer {
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px;
-                width: 100%;
-                
+.wrapperR {
+    animation: showContent 1s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+
+    .wrapperContainer {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            width: 100%;
+            
+            img {
+                height: 30px;
+            }
+        }
+
+        .home {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            background-color: #f4f4f4;
+            z-index: 0;
+
+            .homeContainer {
+
                 img {
-                    height: 30px;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
+            .menu {
+                background-color: #fff;
+                
+                .menuBigContainer {
+                    position: relative;
+                    margin-top: -60px;
+                    border-radius: 40px 40px 0 0;
+                    background-color: #f4f4f4;
+                    z-index: 10;
+                    width: 100%;
 
-            .home {
-                position: relative;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                padding: 0;
-                background-color: #f4f4f4;
-                z-index: 0;
-
-                .homeContainer {
-
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .menu {
-                    background-color: #fff;
-                    
-                    .menuBigContainer {
-                        position: relative;
-                        margin-top: -60px;
-                        border-radius: 40px 40px 0 0;
-                        background-color: #f4f4f4;
-                        z-index: 10;
-                        width: 100%;
-    
-                        .menuTitle {
-                            padding: 40px 15px 0 15px;
-                            margin-bottom: 30px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            
-                            h1 {
-                                font-style: italic;
-                                font-size: 25px;
-                            }
-        
-                            i {
-                                font-size: 20px;
-                            }
+                    .menuTitle {
+                        padding: 40px 15px 0 15px;
+                        margin-bottom: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        
+                        h1 {
+                            font-style: italic;
+                            font-size: 25px;
                         }
     
-                        .menuContainer {
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .menuContainer {
+                        display: grid;
+                        grid-template-columns: repeat(1, 1fr);
+                        padding: 40px 15px;
+                        grid-gap: 30px;
+    
+                        .menuBox {
                             display: grid;
                             grid-template-columns: repeat(1, 1fr);
-                            padding: 40px 15px;
-                            grid-gap: 30px;
-        
-                            .menuBox {
-                                display: grid;
-                                grid-template-columns: repeat(1, 1fr);
-                                grid-gap: 15px;
-        
-                                h2 {
-                                    position: relative;
-                                    font-size: 18px;
-                                    font-weight: 400;
-                                    text-transform: uppercase;
-        
-                                    &::after {
-                                        content: "";
-                                        left: 0;
-                                        bottom: -5px;
-                                        position: absolute;
-                                        background-color: #58cea7;
-                                        height: 3px;
-                                        width: 50px;
-                                    }
-                                }
-
-                                .menuNameBIG {
-                                    display: flex;
-                                    align-items: center;
-                                    cursor: pointer;
-                                    overflow: hidden; 
-
-                                    .menuName {
-                                        border-radius: 15px;
-                                        padding: 10px 20px;
-                                        background-color: #fff; 
-                                        box-shadow: 0 10px 10px #e7e7e7;
-                                        width: 100%;
-                                        transition: width 0.3s ease;
-                                        box-sizing: border-box;
-                                       
-                                       .name1 {
-                                            font-size: 18px;
-                                            font-weight: 600;
-                                        }
-            
-                                       .menuNameContainer {
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: space-between;
-            
-                                            .name2 {
-                                                font-size: 14px;
-                                            }
-            
-                                            .price {
-                                                font-weight: 600;
-                                            }
-                                        }
-                                    }
+                            grid-gap: 15px;
     
-                                    .hiddenCheck {                                       
-                                        i {
-                                            color: #fff;
-                                        }
+                            h2 {
+                                position: relative;
+                                font-size: 18px;
+                                font-weight: 400;
+                                text-transform: uppercase;
     
-                                    }
+                                &::after {
+                                    content: "";
+                                    left: 0;
+                                    bottom: -5px;
+                                    position: absolute;
+                                    background-color: #58cea7;
+                                    height: 3px;
+                                    width: 50px;
                                 }
                             }
+
+                            .menuNameBIG {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                overflow: hidden; 
+
+                                .menuName {
+                                    border-radius: 15px;
+                                    padding: 10px 20px;
+                                    background-color: #fff; 
+                                    box-shadow: 0 10px 10px #e7e7e7;
+                                    width: 100%;
+                                    transition: width 0.3s ease;
+                                    box-sizing: border-box;
+                                   
+                                   .name1 {
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                    }
         
-                            .buttonOrder {
-                                text-align: center;
-                                margin-top: 10px;
-                                
-                                a {
-                                    color: #fff;
-                                    display: inline-block;   
-                                    padding: 20px 50px;
-                                    border-radius: 30px;
-                                    background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
+                                   .menuNameContainer {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+        
+                                        .name2 {
+                                            font-size: 14px;
+                                        }
+        
+                                        .price {
+                                            font-weight: 600;
+                                        }
+                                    }
                                 }
+
+                                .hiddenCheck {                                       
+                                    i {
+                                        color: #fff;
+                                    }
+
+                                }
+                            }
+                        }
+    
+                        .buttonOrder {
+                            text-align: center;
+                            margin-top: 10px;
+                            
+                            a {
+                                color: #fff;
+                                display: inline-block;   
+                                padding: 20px 50px;
+                                border-radius: 30px;
+                                background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
                             }
                         }
                     }
                 }
             }
-
         }
+
     }
+}
 
-    footer {
-        z-index: 1000;
-        padding: 40px 15px;
-        background-color: #303030;
+footer {
+    z-index: 1000;
+    padding: 40px 15px;
+    background-color: #303030;
 
-        .footerContainer {
-            .footerLogo {
-                img {
-                    height: 25px;
-                }
+    .footerContainer {
+        .footerLogo {
+            img {
+                height: 25px;
             }
+        }
 
-            .footerList {
-                margin-top: 20px;
+        .footerList {
+            margin-top: 20px;
 
-                .footerBox {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    
-                    i,p {
-                        color: #fff;
-                    }
+            .footerBox {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                
+                i,p {
+                    color: #fff;
                 }
             }
         }
@@ -252,12 +254,6 @@
     100% {
         display: none;
     }
-}
-
-.wrapperR {
-    animation: showContent 1s forwards;
-    animation-delay: 1s;
-    opacity: 0;
 }
 
 @keyframes showContent {
