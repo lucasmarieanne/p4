@@ -1,7 +1,23 @@
+$animation-duration: 1s;
+$animation-delay: 1s;
+
+// Couleurs
+$color-bg-light: #f4f4f4;
+$color-bg-header: #ededed;
+$color-gradient-start: rgb(222, 84, 222);
+$color-gradient-end: rgb(160, 71, 201);
+$color-gradient-hover-start: rgb(160, 71, 201);
+$color-gradient-hover-end: rgb(222, 84, 222);
+$color-primary: rgb(161, 12, 214);
+$color-restaurant-badge-bg: #62cba0;
+$color-restaurant-badge-text: #316750;
+$color-footer-bg: #303030;
+$color-footer-text: #fff;
+
 .wrapper {
   // styles mobiles de base (sans media query)
-  animation: showContent 1s forwards;
-  animation-delay: 1s;
+  animation: showContent $animation-duration forwards;
+  animation-delay: $animation-delay;
   opacity: 0;
 
   .wrapperContainer {
@@ -23,7 +39,7 @@
       justify-content: center;
       padding: 15px;
       gap: 10px;
-      background-color: #ededed;
+      background-color: $color-bg-header;
 
       input {
         outline: none;
@@ -41,7 +57,7 @@
       height: 100%;
       text-align: center;
       padding: 40px 15px;
-      background-color: #f4f4f4;
+      background-color: $color-bg-light;
 
       .homeContainer {
         p {
@@ -51,13 +67,13 @@
         a {
           margin-top: 10px;
           display: inline-block;
-          background: linear-gradient(to bottom, rgb(222, 84, 222), rgb(160, 71, 201));
-          color: #fff;
+          background: linear-gradient(to bottom, $color-gradient-start, $color-gradient-end);
+          color: $color-footer-text;
           padding: 20px 30px;
           border-radius: 30px;
 
           &:hover {
-            background: linear-gradient(to bottom, rgb(160, 71, 201), rgb(222, 84, 222));
+            background: linear-gradient(to bottom, $color-gradient-hover-start, $color-gradient-hover-end);
           }
         }
       }
@@ -78,7 +94,7 @@
           display: flex;
           align-items: center;
           gap: 15px;
-          background-color: #f4f4f4;
+          background-color: $color-bg-light;
           padding: 30px;
           border-radius: 25px;
 
@@ -93,7 +109,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgb(161, 12, 214);
+            background-color: $color-primary;
             border-radius: 50%;
             height: 25px;
             width: 25px;
@@ -109,7 +125,7 @@
 
     .restaurant {
       padding: 40px 20px;
-      background-color: #f4f4f4;
+      background-color: $color-bg-light;
 
       .restaurantContainer {
         margin-top: 30px;
@@ -128,9 +144,9 @@
               top: 15px;
               right: 15px;
               padding: 10px 20px;
-              background-color: #62cba0;
+              background-color: $color-restaurant-badge-bg;
               border-radius: 5px;
-              color: #316750;
+              color: $color-restaurant-badge-text;
             }
 
             .restaurantImg {
@@ -153,10 +169,6 @@
               justify-content: space-between;
               padding: 20px;
 
-              .figcaptionContainer {
-                // vide pour l'instant
-              }
-
               p {
                 font-weight: 600;
               }
@@ -174,7 +186,7 @@
 
   footer {
     padding: 40px 15px;
-    background-color: #303030;
+    background-color: $color-footer-bg;
 
     .footerContainer {
       .footerLogo {
@@ -193,7 +205,7 @@
 
           i,
           p {
-            color: #fff;
+            color: $color-footer-text;
           }
         }
       }
@@ -259,7 +271,7 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeOut 1s ease-out forwards;
+  animation: fadeOut $animation-duration ease-out forwards;
 }
 
 @keyframes fadeOut {
